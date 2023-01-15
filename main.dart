@@ -1,7 +1,12 @@
 void main() {
-  dynamic name;
-  if (name is String) {
-    // 조건을 설정하면 String 멤버를 사용할 수 있다.
-    var length = name.length;
-  }
+  // ?를 붙여주면 null이 가능하다.
+  String? name = 'WakGood';
+  name = null;
+
+  // if (name != null) {
+  //   name.isNotEmpty;
+  // }
+
+  // name이 null이 아니라면 isNotEmpty 속성을 달라고 요청하는 것
+  name?.isNotEmpty;
 }
