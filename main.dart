@@ -1,7 +1,5 @@
+String sayHello(String name) => "Hello $name nice to meet you!";
+
 void main() {
-  Set<int> numbers = {1, 2, 3, 4};
-  numbers.add(1);
-  numbers.add(1);
-  numbers.add(1);
-  print(numbers); // 1, 2, 3, 4
+  print(sayHello('wakgood'));
 }
