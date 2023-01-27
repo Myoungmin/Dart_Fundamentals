@@ -2,7 +2,10 @@ class Player {
   final String name;
   int xp;
 
-  Player(this.name, this.xp);
+  Player({
+    required this.name,
+    required this.xp,
+  });
 
   void sayHello() {
     print("Hi my name is $name");
@@ -10,6 +13,9 @@ class Player {
 }
 
 void main() {
-  var player = Player("wakgood", 158);
+  var player = Player(
+    name: "wakgood",
+    xp: 158,
+  );
   player.sayHello();
 }
