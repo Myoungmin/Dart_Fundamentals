@@ -1,7 +1,9 @@
+enum Team { red, blue }
+
 class Player {
   String name;
   int xp;
-  String team;
+  Team team;
 
   Player({
     required this.name,
@@ -15,13 +17,13 @@ class Player {
 }
 
 void main() {
-  var wakgood = Player(name: 'wakgood', xp: 177, team: 'red');
+  var wakgood = Player(name: 'wakgood', xp: 177, team: Team.red);
 
   // Cascade Operator
   // 작성한 코드와 똑같은 일을 하라고 명시
   var wakgood2 = wakgood
     ..name = 'wakgood2'
     ..xp = 178
-    ..team = 'blue'
+    ..team = Team.blue
     ..sayHello();
 }
