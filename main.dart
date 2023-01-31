@@ -1,6 +1,10 @@
+abstract class Human {
+  void walk();
+}
+
 enum Team { red, blue }
 
-class Player {
+class Player extends Human {
   String name;
   int xp;
   Team team;
@@ -14,6 +18,11 @@ class Player {
   void sayHello() {
     print("Hi my name is $name. My team is $team.");
   }
+
+  // abstract class 메서드 구체화
+  void walk() {
+    print("I'm walk.");
+  }
 }
 
 void main() {
@@ -26,4 +35,6 @@ void main() {
     ..xp = 178
     ..team = Team.blue
     ..sayHello();
+
+  wakgood2.walk();
 }
