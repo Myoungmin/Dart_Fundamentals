@@ -14,6 +14,14 @@ class Player extends Human {
   // 상속을 받은 클래스 생성자 형태
   // 부모의 생성자로 name을 넘겨준다.
   Player({required this.team, required String name}) : super(name);
+
+  // 메서드 오버라이드
+  // super로 부모 메서드 호출
+  @override
+  void sayHello() {
+    super.sayHello();
+    print('and I play for ${team}');
+  }
 }
 
 void main() {
