@@ -1,11 +1,17 @@
+import 'dart:async';
+
+
 void main() {
-  var future = Future<int>.delayed(Duration(seconds: 3), () => 1);
+  final controller = StreamController();
+  final stream = controller.stream;
 
-  future.then((value) async {
-    print(value);
-    await Future.delayed(Duration(seconds: 1), () => print('inside await'));
-    print('after await');
-  });
 
-  print('last line');
+  // stream의 listen() 함수를 실행하면, 값이 주입될 때마다 해당 메서드를 실행하게 된다.
+  stream.listen((val) => print('${val}'));
+
+
+  // 값 주입하기
+  controller.sink.add(1);
+  controller.sink.add(2);
+  controller.sink.add(3);
 }
